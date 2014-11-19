@@ -6,7 +6,7 @@ public class Docente {
 	private String nombre;
 	private String tipo_docente;
 	
-	public void Docente(){
+	public Docente(){
 		
 	}
 	
