@@ -1,15 +1,55 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Iniciar Sesión</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<style>
+        .espacioTrabajo{
+             width: 100%;   
+        }
+        .columnaCentral{
+             padding: 3.4rem;   
+        }
+    </style>
 </head>
 <body>
 	<div class="contenedor">
+		<header></header>
 		
 		<div class="espacioTrabajo" id="espacio">
-            <header></header>
+			<h2>Sistema de Información - Planta de Operaciones Unitarias UFPS</h2>
+			<div class="fila conBorde">
+				<div class="columnaCentral">
+				    <h3>Iniciar sesión</h3>
+					<form action="" method="POST">
+					    <div class="inputConTexto">
+                            <div class="texto">
+                                <label>Usuario:</label>
+                            </div>
+                            <input type="text" placeholder="Nombre de Usuario" name="usuario" required>
+                            <div class="ajuste"></div>
+                        </div>
+                        <div class="inputConTexto">
+                            <div class="texto">
+                                <label>Contraseña:</label>
+                            </div>
+                            <input type="password" placeholder="********" name="password" required>
+                            <div class="ajuste"></div>
+                        </div>
+                        <div class="selectButton">
+                            <select>    
+                                <option value="Valor1" selected="selected">Administrador</option>
+                                <option value="Valor2">Asistente</option>
+                            </select>
+                            <input type="submit" value="Iniciar Sesión">
+                        </div>
+					</form>
+				</div>
+
+			</div>
+			
 		</div>
 		<footer>
 			<h3>Universidad Francisco de Paula Santander</h3>
@@ -18,6 +58,5 @@
 		</footer>	
 	</div>
 	
-	<script type="text/javascript" src="js/sistema.js"></script>
 </body>
 </html>

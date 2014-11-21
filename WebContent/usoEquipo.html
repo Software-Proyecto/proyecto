@@ -2,8 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Equipo</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+        webshims.setOptions('waitReady', false);
+        webshims.setOptions('forms-ext', {types: 'date time'});
+        webshims.polyfill('forms forms-ext');
+    </script>
+
 </head>
 <body>
 	<div class="contenedor">
@@ -65,14 +73,43 @@
 					</div>
 				</div>
 				<div class="espacioMenu fila conBorde">
-					<div id="registrar" class="campoMenu unaColumna">
-						<h1>Titulo Espacio 1</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+					<div id="registrar" class="campoMenu">
+					    <div class="unaColumna">
+                           <p>Equipo:</p>
+                            <select>    
+                                <option value="Valor1" selected="selected">Aqui cargar</option>
+                                <option value="Valor2">desde la BD</option>
+                                <option value="Valor3">Los equipos</option>
+                            </select>
+                            Fecha:
+                            <input type="date" />
+                        </div>
+                        <div class="conBorde">
+                            <div class="dosColumnas">
+                                <p>Hora de Inicio:</p>
+                                <input type="time" />
+                            </div>
+                            <div class="dosColumnas">
+                                 <p>Hola Final:</p>
+                                 <input type="time" />
+                            </div>
+                        </div>
+                        <div class="conBorde">
+                            <div class="columnaCentral">
+                                <p>Material Utilizado:</p>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="prueba" value="prueba1">Cargar Material<br>
+                                    <input type="checkbox" name="prueba" value="prueba2">Desde<br>
+                                    <input type="checkbox" name="prueba" value="prueba3">La BD 
+                                </div>
+                                <p>Responsable:</p>
+                                <input type="text">
+                                <p>Observaciones</p>
+                                <input type="text"><br>
+                                <input type="submit" class="rojo">
+                            </div>
+                        </div>
+                        
 					</div>
 					<div id="consultar" class="campoMenu unaColumna">
 						<h1>Titulo Espacio 2</h1>
@@ -83,10 +120,10 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 					</div>
+					
 				</div>
-			</div>
-			
-        </div>	
+			</div>	
+		</div>	
 		<footer>
 			<h3>Universidad Francisco de Paula Santander</h3>
 			<h4>Planta de Operaciones Unitarias</h4>

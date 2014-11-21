@@ -234,6 +234,7 @@ header{
 .espacioTrabajo{
 	width: 93%;
 	float: right;
+    text-align: center;
 	transition: all .3s ease;
 }
 .ajuste{
@@ -265,19 +266,17 @@ header{
 	margin: 2rem 2% 2rem 0;
 	float: left;
 }
-.unaColumna, .dosColumnas, .tresColumnas{
+.unaColumna, .dosColumnas, .tresColumnas, .columnaCentral{
 	padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 	box-sizing: border-box;
 		-webkit-box-sizing: border-box;
      	-moz-box-sizing: border-box;  
 }
-.conBorde .unaColumna, .conBorde .dosColumnas, .conBorde .tresColumnas{
+.conBorde .unaColumna, .conBorde .dosColumnas, .conBorde .tresColumnas, .conBorde .columnaCentral{
 	box-shadow: 0 0 1px #CCC;
 	background-color: #FFF;
-}
-.columnaCentral{
-	width: 60%;
-	margin: 4rem auto;
 }
 input{
 	height: 3rem;
@@ -285,7 +284,7 @@ input{
 		-webkit-box-sizing: border-box;
      	-moz-box-sizing: border-box;
 }
-input[type="date"], input[type="datetime-local"],input[type="range"]{
+input[type="date"],input[type="datetime-local"],input[type="range"]{
 	width: 100%;
 	text-align: center;
 	margin-top: 1rem;
@@ -293,14 +292,15 @@ input[type="date"], input[type="datetime-local"],input[type="range"]{
 	border-radius: 0.2rem;
 	border: 1px solid #BBB;
 }
-input[type="text"]{
+input[type="text"], input[type="password"]{
 	border-radius: 0.2rem;
 	border: 1px solid #BBB;
 	transition: all .3s ease;
 	margin-top: 1rem;
+    width: 100%;
 	margin-bottom: 1rem;
 }
-input[type="text"]:hover{
+input[type="text"]:hover, input[type="password"]:hover{
 	border: 1px solid #999;
 	background-color: #ecf0f1;
 }
@@ -319,7 +319,7 @@ input[type="text"]:hover{
 .inputConTexto{
 	width: 100%;
 }
-.inputConTexto input[type="text"]{
+.inputConTexto input[type="text"], .inputConTexto input[type="password"], .inputConTexto input[type="number"]{
 	width: 74%;
 	float: right;
 }
@@ -387,7 +387,6 @@ input[type="checkbox"]{
 .rojo{
 	background-color: #e74c3c;
 }
-
 .alerta{
 	position: absolute;
 	bottom: 6rem;
@@ -415,7 +414,7 @@ input[type="checkbox"]{
 	background-color: rgba(236, 240, 241,.9);
 	color: #000;
 }
-.espacioMenu div{
+.espacioMenu .campoMenu{
 	opacity: 0;
 	display: none;
 	transition: opacity .3s ease;
@@ -424,12 +423,18 @@ input[type="checkbox"]{
 	display: block;
 	opacity: 1;
 }
-.
 .botonDesplegable{
 	background-color: #bdc3c7;
 	border: .1rem solid #95a5a6;
 	margin-right: 0;
-	width: 33%;
+}
+.menu .dosColumnas{
+     width: 50%;   
+}
+.columnaCentral{
+    width: 40%;
+    margin-left: 30%;
+    float: left;
 }
 footer{
 	clear: both;
