@@ -319,9 +319,12 @@ input[type="text"]:hover, input[type="password"]:hover{
 .inputConTexto{
 	width: 100%;
 }
-.inputConTexto input[type="text"], .inputConTexto input[type="password"], .inputConTexto input[type="number"]{
+.inputConTexto input[type="text"], .inputConTexto input[type="password"], .inputConTexto input[type="number"], .inputConTexto input[type="date"], .inputConTexto textarea{
 	width: 74%;
 	float: right;
+}
+textarea{
+    resize: vertical;
 }
 .inputConTexto .texto{
 	text-align: left;

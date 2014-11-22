@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+        webshims.setOptions('waitReady', false);
+        webshims.setOptions('forms-ext', {types: 'date time'});
+        webshims.polyfill('forms forms-ext');
+    </script>
+    <style>
+        .input-button-size-2{
+             margin-top: 1.6rem;   
+        }
+    </style>
+</head>
+<body>
+	<div class="contenedor">
+		<header></header>
+		<div class="barraIzq" id="lateralIzq">
+			<div class="campoIzq principal">
+				<div class="img">
+					<span class="icon-user"></span>
+				</div>
+				<p class="campoP">Administrador</p>
+			</div>
+			<div class="campoIzq">
+				<div class="img">
+					<span class="icon-file-powerpoint"></span>
+				</div>
+				<p class="campoP">Equipo</p>
+			</div>
+			<div class="campoIzq">
+				<div class="img">
+					<span class="icon-cog"></span>
+				</div>
+				<p class="campoP">Profesor</p>
+			</div>
+			<div class="campoIzq">
+				<div class="img">
+					<span class="icon-checkmark-circle"></span>
+				</div>
+				<p class="campoP">Materia</p>
+			</div>
+			<div class="campoIzq">
+				<div class="img">
+					<span class="icon-briefcase"></span>
+				</div>
+				<p class="campoP">Practica</p>
+			</div>
+			<div class="campoIzq">
+				<div class="img">
+					<span class="icon-file-powerpoint"></span>
+				</div>
+				<p class="campoP">Mantenimiento</p>
+			</div>
+			<div class="campoIzq">
+				<div class="img">
+					<span class="icon-cog"></span>
+				</div>
+				<p class="campoP">Informe Equipos</p>
+			</div>
+			
+
+		</div>
+		<div class="espacioTrabajo" id="espacio">
+			<div class="variosEspacios">
+				<div class="menu fila">
+					<div class="dosColumnas botonDesplegable" onClick="abrirEspacio('registrar');">
+						<h2>Registrar</h2>
+					</div>
+					<div class="dosColumnas botonDesplegable" onClick="abrirEspacio('consultar');">
+						<h2>Consultar</h2>
+					</div>
+				</div>
+				<div class="espacioMenu fila conBorde">
+					<div id="registrar" class="campoMenu unaColumna">
+					    <form action="">
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Nombre del prestador o razón social:</label>
+                                </div>
+                                <input type="text" placeholder="Prestador" name="prestador" required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Fecha:</label>
+                                </div>
+                                <input type="date" name="fecha" />
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Codigo del prestador:</label>
+                                </div>
+                                <input type="text" placeholder="Codigo del prestador" name="codigo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <h3>Detalles del equipo</h3>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Nombre del equipo:</label>
+                                </div>
+                                <input type="text" placeholder="Nombre del equipo" name="nombreEquipo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Tipo de equipo:</label>
+                                </div>
+                                <input type="text" placeholder="Tipo del equipo" name="tipoEquipo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Marca:</label>
+                                </div>
+                                <input type="text" placeholder="Marca" name="marcaEquipo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Modelo:</label>
+                                </div>
+                                <input type="text" placeholder="Modelo" name="modeloEquipo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Serie:</label>
+                                </div>
+                                <input type="text" placeholder="Serie" name="serieEquipo">
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Fabricante:</label>
+                                </div>
+                                <input type="text" placeholder="Fabricante" name="fabricanteEquipo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Fecha de adquisicion:</label>
+                                </div>
+                                <input type="date" name="fechaAdquisicion" />
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Forma de adquisición:</label>
+                                </div>
+                                <input type="text" placeholder="Forma de adquisición" name="formaAdquisicion"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Dirección del proveedor:</label>
+                                </div>
+                                <input type="text" placeholder="Dirección del proveedor" name="direccionProveedor"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Costo de adquisición:</label>
+                                </div>
+                                <input type="text" placeholder="Costo de adquisición" name="costoAdquisicion"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Dirección del proveedor:</label>
+                                </div>
+                                <input type="text" placeholder="Dirección del proveedor" name="direccionProveedor"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Caracteristicas y componentes del equipo:</label>
+                                </div>
+                                <textarea name="caracteristicasEquipo" id="caracteristicas" rows="4"></textarea>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Voltaje:</label>
+                                </div>
+                                <input type="text" placeholder="Voltaje" name="Voltaje"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Requisitos e indicaciones dados por el fabricante:</label>
+                                </div>
+                                <textarea name="requisitosEquipo" id="requisitos" rows="4"></textarea>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Mantenimiento indicado por el fabricante:</label>
+                                </div>
+                                <input type="text" placeholder="Mantenimiento" name="mantenimiento"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Calibración:</label>
+                                </div>
+                                <input type="text" placeholder="Calibración" name="calibracion"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Servicio en el que se encuentra ubicado:</label>
+                                </div>
+                                <input type="text" placeholder="Servicio" name="servicio"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>No. De placa o código de inventario:</label>
+                                </div>
+                                <input type="text" placeholder="Código de Inventario" name="codigoInventario"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Garantia:</label>
+                                </div>
+                                <input type="text" placeholder="Garantia" name="garantia"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <input type="submit" class="rojo">
+				        </form>
+					</div>
+					<div id="consultar" class="campoMenu unaColumna">
+						<h1>Titulo Espacio 2</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+					</div>
+				</div>
+			</div>
+			
+        </div>	
+		<footer>
+			<h3>Universidad Francisco de Paula Santander</h3>
+			<h4>Planta de Operaciones Unitarias</h4>
+			<h4>2014</h4>
+		</footer>	
+	</div>
+	<script type="text/javascript" src="js/sistema.js"></script>
+
+</body>
+</html>

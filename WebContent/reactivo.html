@@ -2,8 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Reactivos</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+        webshims.setOptions('waitReady', false);
+        webshims.setOptions('forms-ext', {types: 'date time'});
+        webshims.polyfill('forms forms-ext');
+    </script>
 </head>
 <body>
 	<div class="contenedor">
@@ -57,37 +64,50 @@
 		<div class="espacioTrabajo" id="espacio">
 			<div class="variosEspacios">
 				<div class="menu fila">
-					<div class="tresColumnas botonDesplegable" onClick="abrirEspacio('espacio1');">
+					<div class="dosColumnas botonDesplegable" onClick="abrirEspacio('registrar');">
 						<h2>Registrar</h2>
 					</div>
-					<div class="tresColumnas botonDesplegable" onClick="abrirEspacio('espacio2');">
-						<h2>Eliminar</h2>
-					</div>
-					<div class="tresColumnas botonDesplegable" onClick="abrirEspacio('espacio3');">
+					<div class="dosColumnas botonDesplegable" onClick="abrirEspacio('consultar');">
 						<h2>Consultar</h2>
 					</div>
 				</div>
 				<div class="espacioMenu fila conBorde">
-					<div id="espacio1" class="campoMenu unaColumna">
-						<h1>Titulo Espacio 1</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+					<div id="registrar" class="campoMenu unaColumna">
+					<h3>Registrar un nuevo reactivo:</h3>
+						<form action="">
+						    <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Nombre:</label>
+                                </div>
+                                <input type="text" placeholder="Nombre" name="nombreReactivo"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Cantidad inicial:</label>
+                                </div>
+                                <input type="text" placeholder="Cantidad" name="Cantidad Inicial"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Fecha de ingreso:</label>
+                                </div>
+                                <input type="date" name="fechaIngreso"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <div class="inputConTexto">
+                                <div class="texto">
+                                    <label>Fecha de vencimiento:</label>
+                                </div>
+                                <input type="date" name="fechaVencimiento"  required>
+                                <div class="ajuste"></div>
+                            </div>
+                            <input type="submit" class="rojo">
+						</form>
 					</div>
-					<div id="espacio2" class="campoMenu unaColumna">
+					<div id="consultar" class="campoMenu unaColumna">
 						<h1>Titulo Espacio 2</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-					</div>
-					<div id="espacio3" class="campoMenu unaColumna">
-						<h1>Titulo Espacio 3</h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -98,7 +118,7 @@
 				</div>
 			</div>
 			
-			
+        </div>	
 		<footer>
 			<h3>Universidad Francisco de Paula Santander</h3>
 			<h4>Planta de Operaciones Unitarias</h4>
