@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript" src="js/sistema.js"></script>
 	<meta charset="utf-8">
 	<title>Iniciar Sesión</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -23,7 +24,7 @@
 			<div class="fila conBorde">
 				<div class="columnaCentral">
 				    <h3>Iniciar sesión</h3>
-					<form action="" method="POST">
+					<form action="" method="POST" name="frmIndex" id="frmIndex">
 					    <div class="inputConTexto">
                             <div class="texto">
                                 <label>Usuario:</label>
@@ -39,11 +40,14 @@
                             <div class="ajuste"></div>
                         </div>
                         <div class="selectButton">
-                            <select>    
-                                <option value="Valor1" selected="selected">Administrador</option>
-                                <option value="Valor2">Asistente</option>
+                            <select  id= "tipoUsuario">    
+                                <option value="Administrador" selected="selected">Administrador</option>
+                                <option value="Asistente">Asistente</option>
                             </select>
-                            <input type="submit" value="Iniciar Sesión">
+                            <input type="button" value="Iniciar Sesión" onclick="ValidarSesionJS();">
+                        </div>
+                        <div id="divError" name="divError">
+                        
                         </div>
 					</form>
 				</div>

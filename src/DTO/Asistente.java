@@ -4,16 +4,27 @@ public class Asistente {
 	private String codigo;
 	private String nombre;
 	private String apellidos;
+	private String clave;
 	
-	
-	public Asistente(String codigo, String nombre, String apellidos) {
+	public Asistente(String codigo, String nombre, String apellidos,String clave) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
+		this.clave= clave;
 	}
 	
 	public Asistente() {
 	}
+	
+	
+	public String getClave() {
+		return clave;
+	}
+
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+
 	public String getCodigo() {
 		return codigo;
 	}

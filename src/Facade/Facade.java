@@ -1,8 +1,24 @@
 package Facade;
 import java.util.ArrayList;
-import DTO.*;
-public class Facade {
 
+import Negocio.ControlNegocio;
+import DTO.*;
+
+public class Facade {
+	
+	ControlNegocio cn;
+	
+	public Facade(){
+			this.cn=new ControlNegocio();
+	}
+	
+	public boolean validarAdministrador(String codigo,String pass) throws Exception{
+		return cn.validarAdministrador(codigo, pass);
+	}
+	public boolean validarAsistente(String codigo,String pass) throws Exception{
+		return cn.validarAsistente(codigo, pass);
+	}
+	
 	//metodos que tienen todos los registros del sistema
 	public String registarImplemento(){
 		return null;
@@ -55,13 +71,21 @@ public class Facade {
 	public ArrayList<Proveedor> ListaProveedores(){
 		return null;
 	}
+	
 	public ArrayList<Practica> ListaPracticas(){
 		return null;
 	}
+	
 	public ArrayList<Reactivo> ListaReactivos(){
 		return null;
 	}
+	
 	public ArrayList<Implemento> ListaImplemento(){
 		return null;
 	}
+	/*
+	public ArrayList<Integer> datosGraficaEquipos(){
+		
+	} 
+	*/
 }

@@ -14,7 +14,7 @@ import java.sql.*;
  */
 public class BaseDeDatos {
     
-    private static  String bd = "base_planta";
+    private static  String bd = "unitaria";
     private static  String login = "ufps_7";
     private static  String password = "ufps_er";
     private static  String url = "jdbc:postgresql://localhost:5432/"+bd;
